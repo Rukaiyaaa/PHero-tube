@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHTUBE-Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    
+  <div id="accordion">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <span>Discuss the scope of `var`, `let`, and `const`</span>
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <p><b>Function scope: var </b>is function-scoped, it means accessible within the function where it is declared. If declared outside a function, it becomes globally scoped.
+                    <br>
+                    <b>Example: </b><br>
+                    function abc() {  <br>  
+                      if (true) {     <br>
+                          var x = 10; <br>
+                      }               <br>
+                      console.log(x); <br>
+                    }                 <br>
+                    abc(); <br>
+                    Here the output will be x=10
+                  </p>
+                  <p>
+                   <b>Block scope: let</b>  is block-scoped, it means only accessible within the block {} in which it is declared.<br>
+                   <b>Example: </b><br>
+                   function abc() {  <br>  
+                     if (true) {     <br>
+                         let x = 10; <br>
+                     }               <br>
+                     console.log(x); <br>
+                   }                 <br>
+                   abc(); <br>
+                   Here no ouput will be shown but give this ReferenceError: x is not defined
+                  </p>
+                  <p>
+                    <b>Block scope: Like let, const</b> is also block-scoped, it means limited to the block {} where it is declared.
+                  </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <span>Tell us the use cases of `null` and `undefined`</span>
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>use cases of `null`</b><br>
+                      1. When anyone want to  assign "nothing" or an empty value to a variable, use null. <br>
+                      Example:  let user = null; <br>
+                      2. assigning null to a variable to indicate that it has no value. <br>
+                      Example: let user = { name: "Rukaiya" };<br>
+                      user = null; <br>
+                      3. null is commonly used to represent the absence of an object or to signal that a value will be set later. <br>
+                      <b>use cases of `undefined`</b> <br>
+                      1. A variable that is declared but not initialized will be undefined. <br>
+                      Example: let x; <br>
+                      console.log(x); <br>
+                      2. If a function is called without passing all the arguments, the missing ones are undefined. <br>
+                      Example: function greet(name) { <br>
+                        console.log(name); <br>
+                      } <br>
+                      greet(); <br>
+                      3. Accessing a property that doesn’t exist in an object returns undefined. <br>
+                      Example: const obj = { name: "Rukaiya" };
+                      console.log(obj.age);
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <span>What do you mean by REST API?</span>
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  A REST API is a web service that follows the principles of REST (Representational State Transfer). It allows communication between clients and servers using stateless HTTP requests to perform operations on resources (like data).
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="./app.js"></script>
+</body>
+</html>

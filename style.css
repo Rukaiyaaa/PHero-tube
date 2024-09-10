@@ -1,0 +1,123 @@
+@import url(all.min.css);
+
+.container .navbar .view{
+    color: white;
+    background-color: rgb(151, 152, 152);
+}
+.container .navbar .right a{
+    color: white;
+}
+.container .navbar .right{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* Style for accordian */
+
+#accordion{
+    width: 60%;
+    margin: auto;
+    margin-top: 5rem;
+}
+#accordion .accordion .accordion-item .accordion-button{
+    border: none;
+    margin-top: 0.5rem;
+    background-color: rgb(227, 234, 240);
+}
+#accordion .accordion-button::after {
+    content: '';
+    margin-left: auto;
+    transition: transform 0.2s ease-in-out;
+    background-image: none;
+    background-repeat: unset;
+    background-size: unset;
+}
+#accordion .accordion-button.collapsed::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: #000;
+    margin-left: auto;
+}
+#accordion .accordion-button:not(.collapsed)::after {
+    content: '-';
+    font-size: 1.8rem;
+    line-height: 10px;
+    font-weight: 300;
+    color: #000;
+    margin-left: auto;
+    background-image: none;
+    background-repeat: unset;
+    background-size: unset;
+}
+
+
+ /* style for button */
+
+ .category-btn{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+ }
+ .category-btn .btn{
+    margin-left: 2rem;
+    background-color: rgb(151, 152, 152);
+    border: none;
+ }
+ .category-btn #all-btn{
+    background-color: red; 
+ }
+
+
+/* style for card */
+
+.card{
+    width: 293px; 
+    height: 50%; 
+    border: none !important; 
+}
+.card-body{
+   padding-left: 0 !important;
+   padding-bottom: 0 !important;
+   
+}
+#video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+    gap: 2.56rem;
+    margin-top: 3rem;
+}
+.img-box{
+    height: 70%;
+}
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-details{
+    margin-left: 3.5rem;
+}
+.profile-details p{
+    margin-top: -0.5rem;
+}
+.fa-solid{
+    color: blue;
+}
+
+
+
+
+/* stye for showing error message  */
+
+.err-message{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 5rem;
+}
